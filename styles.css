@@ -1,0 +1,136 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #181818;
+    font-family: 'Arial', sans-serif;
+}
+
+.audio-player {
+    width: 90%;
+    max-width: 400px;
+    padding: 20px;
+    background-color: #282828;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    color: #fff;
+}
+
+.audio-images img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.track-info {
+    margin-bottom: 20px;
+}
+
+.track-info #track-title {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.track-info #artist-name {
+    font-size: 16px;
+    color: #b3b3b3;
+}
+
+.controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#play-pause-button, #backButton, #forwardButton {
+    background-color: #1DB954;
+    border: none;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#play-pause-button:hover, #backButton:hover, #forwardButton:hover {
+    background-color: #1ed760;
+}
+
+#volume-control {
+    width: 100px;
+}
+
+.progress-container {
+    margin-bottom: 20px;
+}
+
+.progress {
+    position: relative;
+    height: 10px;
+    background-color: #404040;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+.progress-bar {
+    height: 100%;
+    background-color: #1DB954;
+}
+
+.time-display {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    color: #ccc;
+}
+
+.directionButtons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.directionButtons button {
+    background-color: #1DB954;
+    border: none;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.directionButtons button:hover {
+    background-color: #1ed760;
+}
+
+@media (max-width: 600px) {
+    .audio-player {
+        width: 100%;
+    }
+
+    #volume-control {
+        width: 80px;
+    }
+
+    .controls {
+        flex-direction: column;
+    }
+
+    .directionButtons {
+        flex-direction: column;
+        gap: 10px;
+    }
+}

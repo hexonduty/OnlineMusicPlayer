@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Spotify-like Audio Player</title>
+    
+</head>
+<body>
+    <div class="audio-player">
+        <div class="audio-images">
+            <img id="img" src="#" alt="Album Cover">
+        </div>
+        <div class="track-info">
+            <h3 id="track-title"></h3>
+            <p id="artist-name"></p>
+        </div>
+        <audio style="display: none;" id="audio" controls>
+            <source id="source" src="" type="audio/mpeg">
+        </audio>
+        <div class="controls">
+            <button id="play-pause-button">Play</button>
+            <input type="range" id="volume-control" min="0" max="1" step="0.01" value="1">
+        </div>
+        <div class="progress-container">
+            <div class="progress">
+                <div class="progress-bar" id="progress-bar"></div>
+            </div>
+            <div class="time-display">
+                <span id="current-time">00:00</span> / <span id="total-time">00:00</span>
+            </div>
+        </div>
+        <div class="directionButtons">
+            <button id="backButton">Back</button>
+            <button id="forwardButton">Forward</button>
+        </div>
+    </div>
+
+    <script src="script.js" type="module"></script>
+</body>
+</html>
